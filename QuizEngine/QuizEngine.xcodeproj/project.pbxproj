@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C78FBBD26E4EFB800E61394 /* QuizEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C78FBB326E4EFB800E61394 /* QuizEngine.framework */; };
-		4C78FBC226E4EFB800E61394 /* QuizEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78FBC126E4EFB800E61394 /* QuizEngineTests.swift */; };
-		4C78FBC426E4EFB800E61394 /* QuizEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C78FBB626E4EFB800E61394 /* QuizEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C78FBCE26E4F0D000E61394 /* FlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78FBCD26E4F0D000E61394 /* FlowTest.swift */; };
+		4C78FBD026E4F1E200E61394 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78FBCF26E4F1E200E61394 /* Flow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +24,11 @@
 
 /* Begin PBXFileReference section */
 		4C78FBB326E4EFB800E61394 /* QuizEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuizEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C78FBB626E4EFB800E61394 /* QuizEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizEngine.h; sourceTree = "<group>"; };
 		4C78FBB726E4EFB800E61394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C78FBBC26E4EFB800E61394 /* QuizEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C78FBC126E4EFB800E61394 /* QuizEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEngineTests.swift; sourceTree = "<group>"; };
 		4C78FBC326E4EFB800E61394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C78FBCD26E4F0D000E61394 /* FlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTest.swift; sourceTree = "<group>"; };
+		4C78FBCF26E4F1E200E61394 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +71,8 @@
 		4C78FBB526E4EFB800E61394 /* QuizEngine */ = {
 			isa = PBXGroup;
 			children = (
-				4C78FBB626E4EFB800E61394 /* QuizEngine.h */,
 				4C78FBB726E4EFB800E61394 /* Info.plist */,
+				4C78FBCF26E4F1E200E61394 /* Flow.swift */,
 			);
 			path = QuizEngine;
 			sourceTree = "<group>";
@@ -80,8 +80,8 @@
 		4C78FBC026E4EFB800E61394 /* QuizEngineTests */ = {
 			isa = PBXGroup;
 			children = (
-				4C78FBC126E4EFB800E61394 /* QuizEngineTests.swift */,
 				4C78FBC326E4EFB800E61394 /* Info.plist */,
+				4C78FBCD26E4F0D000E61394 /* FlowTest.swift */,
 			);
 			path = QuizEngineTests;
 			sourceTree = "<group>";
@@ -93,7 +93,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C78FBC426E4EFB800E61394 /* QuizEngine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,9 +146,11 @@
 				TargetAttributes = {
 					4C78FBB226E4EFB800E61394 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					4C78FBBB26E4EFB800E61394 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -194,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C78FBD026E4F1E200E61394 /* Flow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C78FBC226E4EFB800E61394 /* QuizEngineTests.swift in Sources */,
+				4C78FBCE26E4F0D000E61394 /* FlowTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +342,7 @@
 		4C78FBC826E4EFB800E61394 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -357,6 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bitar.QuizEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -364,6 +368,7 @@
 		4C78FBC926E4EFB800E61394 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -388,6 +393,8 @@
 		4C78FBCB26E4EFB800E61394 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZUTM2D9M6W;
@@ -399,6 +406,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bitar.QuizEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -406,6 +414,8 @@
 		4C78FBCC26E4EFB800E61394 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZUTM2D9M6W;
